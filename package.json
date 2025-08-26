@@ -1,0 +1,22 @@
+{
+  "name": "writer-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "dependencies": {
+    "docx": "^8.5.0"
+  },
+  "build": {
+    "appId": "com.abhinaba.writer",
+    "productName": "Writer Desktop",
+    "files": ["main.js", "preload.js", "renderer/**/*"],
+    "directories": { "buildResources": "assets" }
+  }
+}

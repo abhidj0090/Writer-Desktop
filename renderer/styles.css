@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+
+#toolbar {
+  padding: 10px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+#editor {
+  padding: 20px;
+  height: calc(100vh - 50px);
+  outline: none;
+  overflow-y: auto;
+}

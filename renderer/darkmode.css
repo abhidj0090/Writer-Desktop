@@ -1,0 +1,8 @@
+body.dark-mode {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+#toolbar.dark-mode {
+  background: #333333;
+}

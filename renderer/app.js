@@ -4,14 +4,23 @@ const darkModeBtn = document.getElementById('darkModeBtn');
 
 let darkMode = false;
 
-// Save content as DOCX
+// ---- Formatting Helpers ----
+function format(command) {
+  document.execCommand(command, false, null);
+}
+
+function formatBlock(block) {
+  document.execCommand("formatBlock", false, block);
+}
+
+// ---- Save as DOCX ----
 saveBtn.addEventListener('click', async () => {
-  const content = editor.innerText;
-  const success = await window.electronAPI.saveDocx(content);
+  const htmlContent = editor.innerHTML;
+  const success = await window.electronAPI.saveDocx(htmlContent);
   if (success) alert('Document saved successfully!');
 });
 
-// Toggle dark/light mode
+// ---- Dark Mode ----
 darkModeBtn.addEventListener('click', () => {
   darkMode = !darkMode;
   document.body.classList.toggle('dark-mode', darkMode);

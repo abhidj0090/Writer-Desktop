@@ -7,12 +7,20 @@
 </head>
 <body>
   <div id="toolbar">
+    <button onclick="format('bold')"><b>B</b></button>
+    <button onclick="format('italic')"><i>I</i></button>
+    <button onclick="format('underline')"><u>U</u></button>
+    <button onclick="formatBlock('H1')">H1</button>
+    <button onclick="formatBlock('H2')">H2</button>
+    <button onclick="formatBlock('H3')">H3</button>
+    <button onclick="format('insertUnorderedList')">• List</button>
+    <button onclick="format('insertOrderedList')">1. List</button>
     <button id="darkModeBtn">Toggle Dark Mode</button>
     <button id="saveBtn">Save as DOCX</button>
   </div>
 
   <div id="editor" contenteditable="true">
-    Start writing...
+    Start writing here...
   </div>
 
   <script src="app.js"></script>
